@@ -51,7 +51,6 @@ def parse_batch_output(batch_output_file, output_csv_file):
                 output = json.loads(output)
             except json.JSONDecodeError:
                 print(f"Error decoding JSON: {output}")
-                continue
             custom_id = result["custom_id"]
             index = custom_id.split("-")[1]
             # add to results
@@ -69,5 +68,5 @@ def parse_batch_output(batch_output_file, output_csv_file):
 
 if __name__ == "__main__":
 
-    parse_batch_output("data/batch_682e9c5a4e20819084da3b55d901fc1d_output.jsonl",
-                       output_csv_file="data/firs2k.csv")
+    parse_batch_output("data/batch_68379a60a40c81908feb536ea9694f28_output.jsonl",
+                       output_csv_file="data/interventions2k.csv")

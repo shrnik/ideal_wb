@@ -4,7 +4,7 @@ from openai_client import openai_client
 client = openai_client
 
 batch_input_file = client.files.create(
-    file=open("data/batch_input.jsonl", "rb"),
+    file=open("data/batch_input_interventions.jsonl", "rb"),
     purpose="batch"
 )
 
