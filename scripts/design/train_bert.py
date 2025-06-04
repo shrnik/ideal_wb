@@ -54,7 +54,7 @@ val_df, test_df = train_test_split(
 
 num_labels = len(label_encoder.classes_)
 
-MODEL_NAME = "roberta-base"
+MODEL_NAME = "allenai/scibert_scivocab_uncased"
 model = AutoModelForSequenceClassification.from_pretrained(
     MODEL_NAME, num_labels=num_labels)
 
